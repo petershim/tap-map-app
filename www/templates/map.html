@@ -1,0 +1,20 @@
+<ion-view title="iMap">
+    <ion-content>
+
+        <div>
+            <div id="map" lat="34.0134699" lng="-118.4942209" zoom="8" map>
+            </div>
+
+            <div width="80%" class="list list-inset" style="margin-left:10%;margin-right:10%;">
+                <label class="item item-input">
+                    <input type="text" ng-model="user.desc" placeholder="Description">
+                </label>
+
+                <button class="button button-full button-positive" ng-click="saveDetails()">
+                    Save
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
