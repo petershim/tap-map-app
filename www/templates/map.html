@@ -1,20 +1,32 @@
-<ion-view title="iMap">
+<ion-view title="Tap">
     <ion-content>
 
         <div>
             <div id="map" lat="34.0134699" lng="-118.4942209" zoom="8" map>
             </div>
+            <p> {{ new_marker.lat }} </p>
+            <form ng-submit='addMarker()'>
 
             <div width="80%" class="list list-inset" style="margin-left:10%;margin-right:10%;">
                 <label class="item item-input">
-                    <input type="text" ng-model="user.desc" placeholder="Description">
+                    <input type="text" ng-model="new_marker.name" placeholder="Name of Location">
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="new_marker.password" placeholder="Password">
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="new_marker.lat" placeholder="latitude">
+                </label>
+                <label class="item item-input">
+                    <input type="text" ng-model="new_marker.lng" placeholder="longitude">
                 </label>
 
-                <button class="button button-full button-positive" ng-click="saveDetails()">
-                    Save
+                <button ng-submit class="button button-full button-positive">
+                    Save This Network
                 </button>
             </div>
         </div>
+            </form>
 
     </ion-content>
 </ion-view>
